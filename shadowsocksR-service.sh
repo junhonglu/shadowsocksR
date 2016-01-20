@@ -5,8 +5,8 @@
 #description:shadowsocos start|stop|restart 
 SERVER_NAME=shadowsocks 
 PROG=server.py 
-PROG_PATH=your server.py's localpath     ##example /home/shadwosocks/shadowsocks/server.py
-PID_PATH=/var/run 
+PROG_PATH=/usr/local/shadwosocks/shadowsocks/server.py
+PID_PATH=/var/run/ 
 start(){ 
         echo "begin start" 
         if [[ -e $PID_PATH/$SERVER_NAME.pid ]]; then 
