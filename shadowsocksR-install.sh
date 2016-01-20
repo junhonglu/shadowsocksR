@@ -11,10 +11,12 @@ sleep 3
 ####this is to install base packe and git the Shadowsocks-R###
 function ubunbase(){
 apt-get install -y m2crypto git
+cd /usr/local/
 git clone -b manyuser https://github.com/breakwa11/shadowsocks.git
 }
 function centbase(){
 yum install -y m2crypto git libsodium
+cd /usr/local
 git clone -b manyuser https:// github.com/breakwa11/shadowsocks.git
 }
 OS=`cat /etc/issue |awk 'NR==1{print $1}'`
