@@ -20,11 +20,11 @@ cd /usr/local
 git clone -b manyuser https:// github.com/breakwa11/shadowsocks.git
 }
 OS=`cat /etc/issue |awk 'NR==1{print $1}'`
-if [ $OS==Ubuntu ]; then
+if [ $OS == Ubuntu ]; then
 echo "this is ubuntu"
 sleep 2
 ubunbase
-elif [ $OS==CentOS ]; then
+elif [ $OS == CentOS ]; then
 echo "this is CentOS"
 sleep 2
 centbase
