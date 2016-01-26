@@ -57,15 +57,7 @@ cat > /etc/shadowsocks.json << EOF
 }
 EOF
 }
-while :
-do
-read -p "input your ip: " serverip
-if [[ $serverip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
-break
-else
-echo "you ip error,please input one more time"
-fi
-done
+serverip=`curl ifconfig.me`
 while :
 do
 read -p "input your serverport,between 1-65535:" local_port
