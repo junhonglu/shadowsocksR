@@ -1,7 +1,7 @@
 #!/bin/bash
 OS=`cat /etc/issue |awk 'NR==1{print $1}'`
-dir=`pwd`
-ss="/shadowsocks"
+dir=/usr/local
+ss=/shadowsocks
 serverip=`curl ifconfig.me`
 
 if [[ $UID -ne 0 ]]; then
@@ -57,7 +57,7 @@ function config_shaodowsocks(){
       "fast_open": false,
       "workers": 1
    }
-   EOF
+EOF
 }
 while :
 do
