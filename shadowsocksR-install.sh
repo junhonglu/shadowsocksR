@@ -2,7 +2,7 @@
 OS=`cat /etc/issue |awk 'NR==1{print $1}'`
 dir=/usr/local
 ss=/shadowsocks
-serverip=`curl ifconfig.me`
+serverip=`ifconfig |grep venet0:0 -A1|awk -F ":" 'NR==2{print $2}'|sed 's/ .*//g'`
 
 if [[ $UID -ne 0 ]]; then
    echo "#####you must to user root,try to sudo#####"
